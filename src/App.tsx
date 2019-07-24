@@ -1,9 +1,9 @@
 import React from 'react';
 
 // component
-import MyAngular from './components/angular/index';
-import MyVue from './components/vue/index';
-import MyReact from './components/react/index';
+import MyAngular from 'components/angular/index';
+import MyVue from 'components/vue/index';
+import MyReact from 'components/react/index';
 
 // route
 import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
@@ -51,7 +51,9 @@ class App extends React.Component {
     <Layout>
       <BrowserRouter>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed} style={{ background: '#fff' }}>
-          <div className="logo">CVSource Logo</div>
+          <div className="logo">
+            <img src="assets/logo.jpg" alt="logo" width={200} height={64}/>
+          </div>
             <Menu
               mode="inline"
               defaultOpenKeys={['sub1']}
