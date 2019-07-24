@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+// component
+import MyAngular from './components/angular/index';
+import MyVue from './components/vue/index';
+import MyReact from './components/react/index';
+
+// route
+import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
+
+// style
+import './App.scss';
 
 // antd
 import { Layout, Menu, Icon } from 'antd';
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
-
-// component
-import Angular from './components/angular';
-
-// route
-import { Switch, Route, Link, BrowserRouter } from 'react-router-dom';
-
-// style
-import './App.scss';
-import MyAngular from './components/angular/index';
-import MyVue from './components/vue/index';
-import MyReact from './components/react/index';
 
 
 class App extends React.Component {
@@ -119,9 +118,11 @@ class App extends React.Component {
               minHeight: 280,
             }}
           >
-            <Route exact path="/angular1" component={MyAngular} />
-            <Route path="/vue1" component={MyVue} />
-            <Route path="/react1" component={MyReact} />
+            <Switch>
+              <Route path="/angular1" component={MyAngular} />
+              <Route path="/vue1" component={MyVue} />
+              <Route path="/:frame" component={MyReact} />
+            </Switch>
           </Content>
         </Layout>
       </BrowserRouter>
