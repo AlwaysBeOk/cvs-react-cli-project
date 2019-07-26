@@ -112,7 +112,7 @@ module.exports = function(webpackEnv) {
     return loaders;
   };
 
-  return {
+  let o = {
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
@@ -259,12 +259,12 @@ module.exports = function(webpackEnv) {
       // for React Native Web.
       extensions: paths.moduleFileExtensions
         .map(ext => `.${ext}`)
-        .filter(ext => useTypeScript || !ext.includes('ts') || !ext.includes('tsx')),
+        .filter(ext => useTypeScript || !ext.includes('ts')),
       alias: {
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-        // 'react-native': 'react-native-web',
-        '@components': path.resolve('src/components')
+        'react-native': 'react-native-web',
+        // 'components': path.resolve('src/components')
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -610,4 +610,9 @@ module.exports = function(webpackEnv) {
     // our own hints via the FileSizeReporter
     performance: false,
   };
+  let map = require('../not-relative-map.json');
+  for(let k in map){
+    o.resolve.alias[k] = path.resolve(map[k])
+  }
+  return o;
 };
