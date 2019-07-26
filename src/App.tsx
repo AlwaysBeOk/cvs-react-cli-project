@@ -1,9 +1,9 @@
 import React from 'react';
 
 // component
-import MyAngular from 'components/angular/index';
-import MyVue from 'components/vue/index';
-import MyReact from 'components/react/index';
+import MyAngular from '@components/angular/index';
+import MyVue from '@components/vue/index';
+import MyReact from '@components/react/index';
 
 // route
 import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "outDir": "build/dist",
     "target": "es5",
     "lib": [
@@ -16,13 +16,13 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Classic",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve"
   },
-  "exclude": [],
+  "exclude": ["node_modules", "dist", "build", "mock"],
   "include": [
     "src"
   ],
