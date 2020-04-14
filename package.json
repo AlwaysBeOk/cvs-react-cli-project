@@ -1,13 +1,13 @@
 {
-  "name": "CVS-REACT-CLI-PROJECT",
+  "name": "REACT-CLI-PROJECT",
   "version": "1.0.0",
   "private": true,
   "author": "creatto",
   "scripts": {
-    "start": "cross-env CVS_ENV=development node scripts/start.js",
-    "build": "cross-env CVS_ENV=production node scripts/build.js",
-    "build:pre": "cross-env CVS_ENV=production node scripts/build.js",
-    "test": "cross-env CVS_ENV=development node scripts/test.js"
+    "start": "cross-env RC_ENV=development node scripts/start.js",
+    "build": "cross-env RC_ENV=production node scripts/build.js",
+    "build:pre": "cross-env RC_ENV=production node scripts/build.js",
+    "test": "cross-env RC_ENV=development node scripts/test.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -130,8 +130,8 @@
       "node"
     ],
     "watchPlugins": [
-      "/Users/max/learning/cvs-react-cli/node_modules/jest-watch-typeahead/filename.js",
-      "/Users/max/learning/cvs-react-cli/node_modules/jest-watch-typeahead/testname.js"
+      "/Users/max/learning/react-cli-rc/node_modules/jest-watch-typeahead/filename.js",
+      "/Users/max/learning/react-cli-rc/node_modules/jest-watch-typeahead/testname.js"
     ]
   },
   "babel": {

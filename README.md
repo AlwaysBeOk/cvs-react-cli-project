@@ -1,7 +1,7 @@
-# CVS-REACT-CLI-PROJECT
-A project from CVS-REACT-CLI-PROJECT
+# REACT-CLI-RC-PROJECT
+A project from REACT-CLI--RC-PROJECT
 
-一个cvs脚手架模板，以下是react脚手架自带的功能，cvs-cli将实现一套在react-cli基础上适用于本公司项目的脚手架。
+一个rc脚手架模板，以下是react脚手架自带的功能，rc-cli将实现一套在react-cli基础上适用于公司项目的脚手架。
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

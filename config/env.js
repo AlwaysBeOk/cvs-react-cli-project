@@ -8,9 +8,9 @@ const paths = require('./paths');
 delete require.cache[require.resolve('./paths')];
 
 //===========***======================
-//将这句注释调，使用package.json中的变量CVS_ENV，能相应的读出根目录下.env.*配置
+//将这句注释调，使用package.json中的变量RC_ENV，能相应的读出根目录下.env.*配置
 // const NODE_ENV = process.env.NODE_ENV;
-const NODE_ENV = process.env.CVS_ENV;
+const NODE_ENV = process.env.RC_ENV;
 
 if (!NODE_ENV) {
   throw new Error(
@@ -81,7 +81,7 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
-        CVS: process.env.CVS || 'development',
+        RC: process.env.RC || 'development',
       }
     );
   // Stringify all values so we can feed into Webpack DefinePlugin
